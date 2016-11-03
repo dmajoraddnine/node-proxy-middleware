@@ -17,7 +17,7 @@ module.exports = function proxyMiddleware(options) {
   options.port = options.port;
   options.pathname = options.pathname || '/';
 
-  return function (req, resp, next) {
+  return function proxyRequest(req, resp, next) {
     var url = req.url;
     // You can pass the route within the options, as well
     if (typeof options.route === 'string') {
